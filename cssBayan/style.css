@@ -30,16 +30,6 @@ img {
     display: none;
 }
 
-.accordion-conteiner label:before {
-    content: '\276F';
-    float: right;
-}
-
-.accordion-conteiner input:checked+label:before {
-    transition: transform .35s;
-    transform: rotate(90deg);
-}
-
 .accordion-conteiner input:checked+label+.meme-body {
     height: auto;
 }
