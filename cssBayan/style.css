@@ -1,0 +1,40 @@
+html {
+    background-color: #c2b9b0;
+}
+
+.accordion:hover {
+    cursor: pointer
+}
+
+.accordion h2,
+.accordion p {
+    margin: 0;
+}
+
+.accordion img {}
+
+.accordion h2 a {
+    display: block;
+    position: relative;
+    padding: 8px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.memes:hover {
+    background: #e0d6cc;
+    text-decoration-color: #203347;
+}
+
+.accordion h2+div {
+    height: 0;
+    overflow: hidden;
+    -moz-transition: height 0.3s ease-in-out;
+    -webkit-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+}
+
+.accordion :target h2+div {
+    height: auto;
+}
