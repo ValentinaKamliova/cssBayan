@@ -1,40 +1,45 @@
 html {
-    background-color: #c2b9b0;
+    background-color: #7395ae;
+    font-size: 1.3em;
 }
 
-.accordion:hover {
-    cursor: pointer
-}
-
-.accordion h2,
-.accordion p {
-    margin: 0;
-}
-
-.accordion img {}
-
-.accordion h2 a {
-    display: block;
-    position: relative;
-    padding: 8px;
-    color: #000000;
-    text-decoration: none;
-}
-
-.memes:hover {
-    background: #e0d6cc;
-    text-decoration-color: #203347;
-}
-
-.accordion h2+div {
+.accordion-conteiner .meme-body {
+    margin: 0 auto;
     height: 0;
+    cursor: pointer;
     overflow: hidden;
-    -moz-transition: height 0.3s ease-in-out;
-    -webkit-transition: height 0.3s ease-in-out;
-    -o-transition: height 0.3s ease-in-out;
-    transition: height 0.3s ease-in-out;
 }
 
-.accordion :target h2+div {
+img {
+    max-width: 90%;
+}
+
+.meme-body {
+    text-align: center;
+}
+
+.accordion-conteiner label {
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+    height: 1.7em;
+}
+
+
+.accordion-conteiner input {
+    display: none;
+}
+
+.accordion-conteiner label:before {
+    content: '\276F';
+    float: right;
+}
+
+.accordion-conteiner input:checked+label:before {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+
+.accordion-conteiner input:checked+label+.meme-body {
     height: auto;
 }
