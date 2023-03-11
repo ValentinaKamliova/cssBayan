@@ -4,9 +4,15 @@ html {
     color: rgb(255, 255, 255);
 }
 
+body {
+    margin: 0;
+}
+
 h1 {
     color: black;
+    margin: 0.5em;
 }
+
 .accordion-conteiner .meme-body {
     margin: 0 auto;
     height: 0;
@@ -15,8 +21,8 @@ h1 {
     text-align: center;
 }
 
-img {
-    max-width: 90%;
+.meme-img {
+    max-width: 90vw;
 }
 
 .accordion-conteiner label {
@@ -24,6 +30,7 @@ img {
     display: block;
     box-sizing: border-box;
     height: 1.7em;
+    margin: 0 0.5em;
 }
 
 .accordion-conteiner input {
@@ -34,14 +41,10 @@ img {
     height: auto;
 }
 
-.accordion-conteiner input:hover+label+.meme-body {
-    height: auto;
-}
-
-.accordion-conteiner:hover > label:active {
+.accordion-conteiner:hover>.meme-conteiner:active {
     color: rgb(255, 255, 255);
 }
 
-.accordion-conteiner:hover > label {
+.accordion-conteiner:hover>.meme-conteiner {
     color: black;
 }
