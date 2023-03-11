@@ -25,6 +25,11 @@ h1 {
     max-width: 90vw;
 }
 
+.meme-body:focus>.meme-img,
+.meme-body:active>.meme-img {
+    filter: brightness(0.5);
+}
+
 .accordion-conteiner label {
     cursor: pointer;
     display: block;
