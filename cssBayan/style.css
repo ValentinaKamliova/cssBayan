@@ -21,9 +21,10 @@ h1 {
     text-align: center;
 }
 
-.meme-img {
-    max-width: 90vw;
-}
+/* .meme-body {
+    max-width: 80%;
+    max-height: 80%;
+} */
 
 .meme-body:focus>.meme-img,
 .meme-body:active>.meme-img {
@@ -40,21 +41,22 @@ h1 {
     justify-content: space-between;
 }
 
-.accordion-conteiner input+label>img {
+.meme-conteiner input+label>img {
     content: url(./icon/plus.png);
     display: none;
-
 }
 
-.accordion-conteiner input:checked+label>img {
-    content: url(./icon/minus.png);
+.meme-conteiner input:checked+label>img {
+    content: url(./icon/plus.png);
+    transform: rotate(45deg);
 }
 
 .accordion-conteiner input {
     display: none;
 }
 
-.accordion-conteiner input:checked+label+.meme-body {
+.meme-conteiner input:checked+label+.meme-body,
+.meme-conteiner:hover input+label+.meme-body {
     height: auto;
 }
 
