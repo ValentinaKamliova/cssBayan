@@ -1,21 +1,22 @@
 html {
     background-color: #7395ae;
     font-size: 1.3em;
+    color: rgb(255, 255, 255);
 }
 
+h1 {
+    color: black;
+}
 .accordion-conteiner .meme-body {
     margin: 0 auto;
     height: 0;
     cursor: pointer;
     overflow: hidden;
+    text-align: center;
 }
 
 img {
     max-width: 90%;
-}
-
-.meme-body {
-    text-align: center;
 }
 
 .accordion-conteiner label {
@@ -25,11 +26,22 @@ img {
     height: 1.7em;
 }
 
-
 .accordion-conteiner input {
     display: none;
 }
 
 .accordion-conteiner input:checked+label+.meme-body {
     height: auto;
+}
+
+.accordion-conteiner input:hover+label+.meme-body {
+    height: auto;
+}
+
+.accordion-conteiner:hover > label:active {
+    color: rgb(255, 255, 255);
+}
+
+.accordion-conteiner:hover > label {
+    color: black;
 }
