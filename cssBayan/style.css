@@ -36,6 +36,18 @@ h1 {
     box-sizing: border-box;
     height: 1.7em;
     margin: 0 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-conteiner input+label>img {
+    content: url(./icon/plus.png);
+    display: none;
+
+}
+
+.accordion-conteiner input:checked+label>img {
+    content: url(./icon/minus.png);
 }
 
 .accordion-conteiner input {
@@ -50,6 +62,15 @@ h1 {
     color: rgb(255, 255, 255);
 }
 
+.accordion-conteiner:hover>.meme-conteiner:active>label>img {
+    filter: invert(1);    
+}
+
 .accordion-conteiner:hover>.meme-conteiner {
     color: black;
+}
+
+.accordion-conteiner:hover>.meme-conteiner>label>img {
+    filter: none;
+    display: inline-block;
 }
