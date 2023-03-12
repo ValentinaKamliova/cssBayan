@@ -9,8 +9,8 @@ body {
 
 h1 {
     color: black;
-    margin: 0.3em;
-    font-size: 3rem;
+    margin: 0.4em;
+    font-size: 2rem;
 }
 
 span {
@@ -113,25 +113,46 @@ span {
 
 @media (min-width: 820px) {
     h1 {
-      font-size: 4rem;
+        font-size: 3rem;
     }
+
     span {
         font-size: 1.3em;
     }
+
     .accordion-conteiner label {
         height: 1.9rem;
     }
-  
+
+    .accordion-conteiner {
+        margin: 0 5rem;
+    }
+
+    h1 {
+        margin: 0 7rem;
+    }
+}
+
 @media (min-width: 1080px) {
     h1 {
-        font-size: 5rem;
-      }
-      span {
-          font-size: 2em;
-      }
-      .accordion-conteiner label {
-          height: 2.7rem;
-      }
+        font-size: 4rem;
+    }
+
+    span {
+        font-size: 2em;
+    }
+
+    .accordion-conteiner label {
+        height: 2.7rem;
+    }
+
+    .accordion-conteiner {
+        margin: 0 15rem;
+    }
+
+    h1 {
+        margin: 0 17rem;
+    }
 }
 
 @media (hover: hover) {
