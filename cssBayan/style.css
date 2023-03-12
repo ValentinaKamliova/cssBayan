@@ -105,6 +105,12 @@ span {
     color: black;
 }
 
+.meme-conteiner:active>label>span {
+    color: white;
+    opacity: 1;
+    transition: 1s;
+}
+
 @media (min-width: 820px) {
     h1 {
       font-size: 4rem;
