@@ -97,3 +97,10 @@ h1 {
     opacity: 1;
     transition: 1s;
 }
+
+.meme-conteiner:hover>label>img {
+    filter: none;
+    display: inline-block;
+    opacity: 0.5;
+    transition: 0.5s; transform: rotate(45deg);
+}
