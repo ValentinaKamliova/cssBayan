@@ -25,6 +25,11 @@ span {
     cursor: pointer;
 }
 
+.accordion-conteiner .meme-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .accordion-conteiner .meme-body {
     margin: 0 auto;
     height: 0;
@@ -34,11 +39,6 @@ span {
     text-align: center;
     opacity: 0;
     transition: 2s opacity, 2s visibility;
-}
-
-.accordion-conteiner .meme-header {
-    display: flex;
-    justify-content: space-between;
 }
 
 .meme-img {
