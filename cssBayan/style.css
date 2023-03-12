@@ -113,7 +113,7 @@ span {
     color: black;
 }
 
-.meme-conteiner:active>label>span {
+.meme-conteiner:active>label>.meme-header>span {
     color: white;
     opacity: 1;
     transition: 1s;
