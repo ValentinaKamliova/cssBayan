@@ -1,6 +1,5 @@
 html {
     background-color: #7395ae;
-    font-size: 1.3em;
     color: rgb(255, 255, 255);
 }
 
@@ -11,6 +10,17 @@ body {
 h1 {
     color: black;
     margin: 0.3em;
+    font-size: 3rem;
+}
+
+span {
+    font-size: 1em;
+}
+
+.accordion-conteiner {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .accordion-conteiner .meme-body {
@@ -89,6 +99,33 @@ h1 {
     transition: 0.5s;
     transform: rotate(45deg);
     filter: invert(1);
+}
+
+.meme-conteiner input:checked+label {
+    color: black;
+}
+
+@media (min-width: 820px) {
+    h1 {
+      font-size: 4rem;
+    }
+    span {
+        font-size: 1.3em;
+    }
+    .accordion-conteiner label {
+        height: 1.9rem;
+    }
+  
+@media (min-width: 1080px) {
+    h1 {
+        font-size: 5rem;
+      }
+      span {
+          font-size: 2em;
+      }
+      .accordion-conteiner label {
+          height: 2.7rem;
+      }
 }
 
 @media (hover: hover) {
