@@ -34,11 +34,6 @@ h1 {
     padding: 0.2em;
 }
 
-.meme-body:focus>.meme-img,
-.meme-body:active>.meme-img {
-    filter: brightness(0.5);
-}
-
 .accordion-conteiner label {
     cursor: pointer;
     display: block;
@@ -75,16 +70,6 @@ h1 {
     transition: opacity 2s;
 }
 
-.accordion-conteiner:hover>.meme-conteiner:active {
-    color: rgb(255, 255, 255);
-    opacity: 1;
-    transition: 1s;
-}
-
-.accordion-conteiner:hover>.meme-conteiner:active>label>img {
-    filter: invert(1);    
-}
-
 .accordion-conteiner:hover>.meme-conteiner {
     color: black;
     opacity: 1;
@@ -99,8 +84,27 @@ h1 {
 }
 
 .meme-conteiner:hover>label>img {
-    filter: none;
     display: inline-block;
     opacity: 0.5;
-    transition: 0.5s; transform: rotate(45deg);
+    transition: 0.5s;
+    transform: rotate(45deg);
+    filter: invert(1);
+}
+
+@media (hover: hover) {
+
+    .meme-body:focus>.meme-img,
+    .meme-body:active>.meme-img {
+        filter: brightness(0.5);
+    }
+
+    .accordion-conteiner:hover>.meme-conteiner:active {
+        color: rgb(255, 255, 255);
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .accordion-conteiner:hover>.meme-conteiner:active>label>img {
+        filter: invert(1);
+    }
 }
