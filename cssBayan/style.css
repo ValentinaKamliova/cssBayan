@@ -30,6 +30,7 @@ span {
     justify-content: space-between;
     align-items: center;
 }
+
 .accordion-conteiner .meme-body {
     margin: 0 auto;
     height: 0;
@@ -38,7 +39,7 @@ span {
     overflow: hidden;
     text-align: center;
     opacity: 0;
-    transition: 2s opacity, 2s visibility;
+    transition: 3s opacity, 3s visibility;
 }
 
 .meme-img {
@@ -60,7 +61,9 @@ span {
 
 .meme-conteiner input+label>.meme-header>.icon {
     content: url(./icon/plus.png);
-    display: none;
+    max-width: 1.5em;
+    max-height: 1.5em;
+    filter: invert(1);
     opacity: 1;
     transition: 1s;
 }
@@ -68,45 +71,21 @@ span {
 .meme-conteiner input:checked+label>.meme-header>.icon {
     content: url(./icon/plus.png);
     transform: rotate(45deg);
+    filter: none;
     opacity: 1;
     transition: 1s;
+}
+
+.meme-conteiner input:checked+label>.meme-header>.icon {
+    content: url(./icon/plus.png);
+    opacity: 1;
+    transition: 1s;
+    max-width: 1.5em;
+    max-height: 1.5em;
 }
 
 .accordion-conteiner input {
     display: none;
-}
-
-.meme-conteiner input:checked+label>.meme-body,
-.meme-conteiner:hover input+label>.meme-body {
-    height: auto;
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 2s;
-}
-
-.accordion-conteiner:hover>.meme-conteiner {
-    color: black;
-    opacity: 1;
-    transition: 0.2s;
-}
-
-.accordion-conteiner:hover>.meme-conteiner>label>.meme-header>.icon {
-    filter: none;
-    max-width: 1em;
-    max-height: 1em;
-    display: block;
-    opacity: 1;
-    transition: 1s;
-}
-
-.meme-conteiner:hover>label>.meme-header>.icon {
-    display: block;
-    max-width: 1em;
-    max-height: 1em;
-    opacity: 0.5;
-    transition: 0.5s;
-    transform: rotate(45deg);
-    filter: invert(1);
 }
 
 .meme-conteiner input:checked+label {
@@ -117,6 +96,20 @@ span {
     color: white;
     opacity: 1;
     transition: 1s;
+}
+
+.meme-conteiner input:checked+label>.meme-body {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+.meme-body:focus>.meme-img,
+.meme-body:active>.meme-img,
+.meme-header:focus~.meme-body>.meme-img,
+.meme-header:active~.meme-body>.meme-img {
+    filter: brightness(0.5);
 }
 
 @media (min-width: 820px) {
@@ -138,12 +131,6 @@ span {
 
     h1 {
         margin: 0 7rem;
-    }
-
-    .accordion-conteiner:hover>.meme-conteiner>label>.meme-header>.icon,
-    .meme-conteiner:hover>label>.meme-header>.icon {
-        max-width: 1.5em;
-        max-height: 1.5em;
     }
 
 }
@@ -168,19 +155,15 @@ span {
     h1 {
         margin: 0 17rem;
     }
-
-    .accordion-conteiner:hover>.meme-conteiner>label>.meme-header>.icon,
-    .meme-conteiner:hover>label>.meme-header>.icon {
-        max-width: 2em;
-        max-height: 2em;
-    }
 }
 
 @media (hover: hover) {
 
-    .meme-body:focus>.meme-img,
-    .meme-body:active>.meme-img {
-        filter: brightness(0.5);
+    .meme-conteiner input+label>.meme-header>.icon {
+        content: url(./icon/plus.png);
+        display: none;
+        opacity: 1;
+        transition: 1s;
     }
 
     .accordion-conteiner:hover>.meme-conteiner:active {
@@ -192,4 +175,43 @@ span {
     .accordion-conteiner:hover>.meme-conteiner:active>label>.meme-header>.icon {
         filter: invert(1);
     }
+
+    .meme-conteiner:hover input+label>.meme-body {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 2s;
+    }
+
+    .accordion-conteiner:hover>.meme-conteiner {
+        color: black;
+        opacity: 1;
+        transition: 0.2s;
+    }
+
+    .accordion-conteiner:hover>.meme-conteiner>label>.meme-header>.icon {
+        filter: none;
+        max-width: 1em;
+        max-height: 1em;
+        display: block;
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .meme-conteiner:hover>label>.meme-header>.icon {
+        display: block;
+        max-width: 1em;
+        max-height: 1em;
+        opacity: 0.5;
+        transition: 0.5s;
+        transform: rotate(45deg);
+        filter: invert(1);
+    }
+
+    .accordion-conteiner:hover>.meme-conteiner>label>.meme-header>.icon,
+    .meme-conteiner:hover>label>.meme-header>.icon {
+        max-width: 1.5em;
+        max-height: 1.5em;
+    }
+
 }
